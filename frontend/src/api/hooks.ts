@@ -98,7 +98,7 @@ import {
     MopDockDryManualTriggerCommand,
     fetchWifiConfigurationProperties,
     fetchWifiScan,
-    sendDismissWelcomeDialogAction,
+    sendDismissWelcomeDialogAction, MapChangeCommand, sendMapChangeCommand,
 } from "./client";
 import {
     PresetSelectionState,
@@ -357,6 +357,25 @@ export const useBasicControlMutation = () => {
     return useMutation(
         (command: BasicControlCommand) => {
             return sendBasicControlCommand(command).then(fetchStateAttributes);
+        },
+        {
+            onError,
+            onSuccess(data) {
+                queryClient.setQueryData<RobotAttribute[]>(CacheKey.Attributes, data, {
+                    updatedAt: Date.now(),
+                });
+            },
+        }
+    );
+};
+
+export const useMapChangeMutation = () => {
+    const queryClient = useQueryClient();
+    const onError = useOnCommandError(Capability.PersistentMapControl);
+
+    return useMutation(
+        (command: MapChangeCommand) => {
+            return sendMapChangeCommand(command).then(fetchStateAttributes);
         },
         {
             onError,

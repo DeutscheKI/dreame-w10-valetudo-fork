@@ -219,6 +219,18 @@ export const sendBasicControlCommand = async (
     );
 };
 
+export type MapChangeCommand = 11 | 49 | 31;
+export const sendMapChangeCommand = async (
+    command: MapChangeCommand
+): Promise<void> => {
+    await valetudoAPI.put(
+        `/robot/capabilities/MapChangeCapability`,
+        {
+            action: command,
+        }
+    );
+};
+
 export const sendGoToCommand = async (point: Point): Promise<void> => {
     await valetudoAPI.put(
         `/robot/capabilities/${Capability.GoToLocation}`,
