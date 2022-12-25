@@ -72,15 +72,15 @@ interface MenuSubheader {
 //Note that order is important here
 const menuTree: Array<MenuEntry | MenuSubEntry | MenuSubheader> = [
     {
-        kind: "MenuEntry",
-        routeMatch: "/",
-        title: "Home",
-        menuIcon: HomeIcon,
-        menuText: "Home"
-    },
-    {
         kind: "Subheader",
         title: "Robot"
+    },
+    {
+        kind: "MenuEntry",
+        routeMatch: "/oldmap",
+        title: "Oldmap",
+        menuIcon: HomeIcon,
+        menuText: "Oldmap"
     },
     {
         kind: "MenuEntry",

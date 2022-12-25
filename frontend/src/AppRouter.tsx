@@ -32,7 +32,7 @@ const AppRouter: React.FunctionComponent<{ paletteMode: PaletteMode, setPaletteM
                 <Content>
                     <ValetudoAppBar paletteMode={paletteMode} setPaletteMode={setPaletteMode}/>
                     <Switch>
-                        <Route exact path="/">
+                        <Route exact path="/oldmap">
                             <HomePage/>
                         </Route>
                         <Route path="/robot">
