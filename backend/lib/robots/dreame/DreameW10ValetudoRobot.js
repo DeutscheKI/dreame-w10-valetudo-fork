@@ -3,6 +3,7 @@ const DreameQuirkFactory = require("./DreameQuirkFactory");
 const DreameValetudoRobot = require("./DreameValetudoRobot");
 const MiioValetudoRobot = require("../MiioValetudoRobot");
 const QuirksCapability = require("../../core/capabilities/QuirksCapability");
+const DreameMapChangeCapability = require("./capabilities/DreameMapChangeCapability");
 
 class DreameW10ValetudoRobot extends DreameMopValetudoRobot {
     /**
@@ -27,6 +28,8 @@ class DreameW10ValetudoRobot extends DreameMopValetudoRobot {
                 QuirkFactory.getQuirk(DreameQuirkFactory.KNOWN_QUIRKS.CARPET_DETECTION_SENSOR),
             ]
         }));
+
+        this.registerCapability(new DreameMapChangeCapability({robot: this}));
     }
 
     getModelName() {
