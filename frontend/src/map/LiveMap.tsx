@@ -116,9 +116,13 @@ class LiveMap extends Map<LiveMapProps, LiveMapState> {
             this.state.zones.length > 0 ||
             this.state.goToTarget !== undefined
         ) {
-            usePendingMapAction.setState({hasPendingMapAction: true});
+            if(!usePendingMapAction.getState().hasPendingMapAction) {
+                usePendingMapAction.setState({hasPendingMapAction: true});
+            }
         } else {
-            usePendingMapAction.setState({hasPendingMapAction: false});
+            if(usePendingMapAction.getState().hasPendingMapAction) {
+                usePendingMapAction.setState({hasPendingMapAction: false});
+            }
         }
     }
 
