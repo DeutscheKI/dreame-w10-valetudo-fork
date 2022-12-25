@@ -1,6 +1,7 @@
 import {HashRouter, Redirect, Route, Switch} from "react-router-dom";
 import Div100vh from "react-div-100vh";
 import HomePage from "./HomePage";
+import HajoDashboard from "./HajoDashboard";
 import SettingsRouter from "./settings";
 import {PaletteMode, styled} from "@mui/material";
 import RobotRouter from "./robot";
@@ -30,22 +31,29 @@ const AppRouter: React.FunctionComponent<{ paletteMode: PaletteMode, setPaletteM
         <HashRouter>
             <Root>
                 <Content>
-                    <ValetudoAppBar paletteMode={paletteMode} setPaletteMode={setPaletteMode}/>
                     <Switch>
-                        <Route exact path="/oldmap">
-                            <HomePage/>
-                        </Route>
-                        <Route path="/robot">
-                            <RobotRouter/>
-                        </Route>
-                        <Route path="/settings">
-                            <SettingsRouter/>
-                        </Route>
-                        <Route path="/valetudo">
-                            <ValetudoRouter/>
+                        <Route exact path="/">
+                            <HajoDashboard/>
                         </Route>
                         <Route path="*">
-                            <Redirect to="/"/>
+                            <ValetudoAppBar paletteMode={paletteMode} setPaletteMode={setPaletteMode}/>
+                            <Switch>
+                                <Route exact path="/oldmap">
+                                    <HomePage/>
+                                </Route>
+                                <Route path="/robot">
+                                    <RobotRouter/>
+                                </Route>
+                                <Route path="/settings">
+                                    <SettingsRouter/>
+                                </Route>
+                                <Route path="/valetudo">
+                                    <ValetudoRouter/>
+                                </Route>
+                                <Route path="*">
+                                    <Redirect to="/"/>
+                                </Route>
+                            </Switch>
                         </Route>
                     </Switch>
                 </Content>
