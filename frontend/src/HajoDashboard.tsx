@@ -189,13 +189,13 @@ const HajoDashboard = (): JSX.Element => {
                                         </Grid>
                                         <Grid item>
                                             <ButtonGroup fullWidth variant="outlined">
-                                                <Button variant="outlined" size="medium" onClick={() => { executeMapCommand(11); }} color="inherit" style={{height: "3.5em", borderColor: "inherit"}}>
+                                                <Button variant="outlined" size="medium" onClick={() => { setSettingsOpen(false);executeMapCommand(11); }} color="inherit" style={{height: "3.5em", borderColor: "inherit"}}>
                                                     Wohnzimmer
                                                 </Button>
-                                                <Button variant="outlined" size="medium" onClick={() => { executeMapCommand(31); }} color="inherit" style={{height: "3.5em", borderColor: "inherit"}}>
+                                                <Button variant="outlined" size="medium" onClick={() => { setSettingsOpen(false);executeMapCommand(31); }} color="inherit" style={{height: "3.5em", borderColor: "inherit"}}>
                                                     Oben
                                                 </Button>
-                                                <Button variant="outlined" size="medium" onClick={() => { executeMapCommand(49); }} color="inherit" style={{height: "3.5em", borderColor: "inherit"}}>
+                                                <Button variant="outlined" size="medium" onClick={() => { setSettingsOpen(false);executeMapCommand(49); }} color="inherit" style={{height: "3.5em", borderColor: "inherit"}}>
                                                     Keller
                                                 </Button>
                                             </ButtonGroup >
