@@ -7,7 +7,7 @@ import gfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import style from "./About.module.css";
 import {AboutText} from "./res/AboutText";
-import {ReactComponent as Logo} from "../assets/icons/robomaid_logo_large.png";
+import Logo from "../assets/icons/robomaid_logo_large.png";
 import DetailPageHeaderRow from "../components/DetailPageHeaderRow";
 
 const About = (): JSX.Element => {
@@ -31,7 +31,7 @@ const About = (): JSX.Element => {
                             textAlign: "center"
                         }}
                     >
-                        <Logo
+                        <img src={Logo}
                             style={{
                                 width: "100%"
                             }}

@@ -53,7 +53,7 @@ const WelcomeDialog: FunctionComponent<{open: boolean}> = ({
             open={open}
         >
             <DialogTitle>
-                Welcome to Valetudo
+                Hello I am Laura!
             </DialogTitle>
             <DialogContent>
                 <DialogContentText
@@ -62,18 +62,6 @@ const WelcomeDialog: FunctionComponent<{open: boolean}> = ({
                     }}
                     component="span"
                 >
-                    <Typography>
-                        It looks like it might the first time that you&apos;re using Valetudo on this robot.
-                    </Typography>
-                    <br/>
-                    <Typography>
-                        The first step is usually to let the robot create a new map of your home.
-                        Depending on your firmware, the map will allow you to clean specific rooms, add virtual walls and more.
-                        <br/><br/>
-                        There are some variations in the map creation process based on the model of robot.
-                        For example, some robots might require you to enable map persistence first, whereas others might offer a dedicated Mapping Pass.
-                    </Typography>
-                    <br/>
                     <Typography component="span">
                         For the initial mapping, please ensure that:
                         <ul>
@@ -124,13 +112,6 @@ const WelcomeDialog: FunctionComponent<{open: boolean}> = ({
                             </>
                         )
                     }
-                    <br/>
-                    <Typography>
-                        While watching your robot zip around, you might want to <Link href="https://github.com/sponsors/Hypfer" target="_blank" rel="noopener">consider donating</Link>.
-                        If you&apos;d rather decide later, the donation link can also be found hiding unobtrusively at the bottom of the sidebar menu.
-                        <br/><br/>
-                        Now, please enjoy your cloud-free robot :)
-                    </Typography>
                 </DialogContentText>
             </DialogContent>
             <DialogActions>

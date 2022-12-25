@@ -20,7 +20,7 @@ import {
     TextField,
     Typography
 } from "@mui/material";
-import {ReactComponent as Logo} from "./assets/icons/robomaid_logo_large.png";
+import Logo from "./assets/icons/robomaid_logo_large.png";
 import React from "react";
 import {
     Refresh as RefreshIcon,
@@ -270,7 +270,7 @@ const ProvisioningPage = (): JSX.Element => {
                 >
                     <Grid item>
                         <Box px={2} pt={2} pb={1}>
-                            <Logo
+                            <img src={Logo}
                                 style={{
                                     width: "90%",
                                     marginLeft: "5%"

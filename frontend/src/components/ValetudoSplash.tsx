@@ -1,4 +1,4 @@
-import {ReactComponent as SplashLogo} from "../assets/icons/robomaid_splash.png";
+import SplashLogo from "../assets/icons/robomaid_splash.png";
 import {CircularProgress, Grid} from "@mui/material";
 
 const ValetudoSplash = (): JSX.Element => {
@@ -22,7 +22,7 @@ const ValetudoSplash = (): JSX.Element => {
             <Grid
                 item
             >
-                <SplashLogo
+                <img src={SplashLogo}
                     style={{
                         width: "90%",
                         marginLeft: "5%"

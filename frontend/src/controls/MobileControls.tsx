@@ -1,6 +1,6 @@
 import {Box, Grid, Icon, Paper, styled} from "@mui/material";
 import ControlsBody from "./ControlsBody";
-import {ReactComponent as Logo} from "../assets/icons/robomaid_logo_large.png";
+import Logo from "../assets/icons/robomaid_logo_large.png";
 import {ExpandLess as OpenIcon, ExpandMore as CloseIcon,} from "@mui/icons-material";
 import React from "react";
 
@@ -38,7 +38,7 @@ const MobileControls: React.FunctionComponent<{ open: boolean, setOpen: (newOpen
             <ControlsSheetContainer
                 style={{
                     display: open ? "" : "none",
-                    height: "calc(95% - 68px)",
+                    height: "calc(95% - 36px)",
                 }}
             >
                 <Box p={1} sx={{
@@ -52,27 +52,22 @@ const MobileControls: React.FunctionComponent<{ open: boolean, setOpen: (newOpen
                 container
                 direction="row"
                 sx={{
-                    height: "68px"
+                    height: "36px"
                 }}
                 onClick={() => {
                     setOpen(!open);
                 }}
             >
                 <Grid item>
-                    <Box px={2} pt={2} pb={1}>
-                        <Logo
+                        <img src={Logo}
                             style={{}}
-                            width={200}
                             height={36}
                         />
-                    </Box>
                 </Grid>
                 <Grid item sx={{
                     marginLeft: "auto"
                 }}>
-                    <Box px={2} pt={2} pb={1}>
-                        <StyledIcon as={open ? CloseIcon : OpenIcon}/>
-                    </Box>
+                    <StyledIcon as={open ? CloseIcon : OpenIcon}/>
                 </Grid>
             </Grid>
         </Paper>

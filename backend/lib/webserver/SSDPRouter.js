@@ -60,25 +60,25 @@ class SSDPRouter {
                         "deviceType": "urn:schemas-upnp-org:device:Basic:1"
                     },
                     {
-                        "friendlyName": "Valetudo " + this.robot.getModelName()
+                        "friendlyName": "Laura " + this.robot.getModelName()
                     },
                     {
                         "manufacturer": this.robot.getManufacturer()
                     },
                     {
-                        "manufacturerURL": "https://valetudo.cloud"
+                        "manufacturerURL": "https://hajo.me"
                     },
                     {
-                        "modelDescription": "Valetudo-enabled robot"
+                        "modelDescription": "Laura"
                     },
                     {
                         "modelName": this.robot.getModelName()
                     },
                     {
-                        "modelNumber": Tools.GET_VALETUDO_VERSION() + " (Valetudo)"
+                        "modelNumber": Tools.GET_VALETUDO_VERSION() + " (Laura)"
                     },
                     {
-                        "modelURL": "https://valetudo.cloud"
+                        "modelURL": "https://hajo.me"
                     },
                     {
                         "UDN": "uuid:" + Tools.GET_SYSTEM_ID()

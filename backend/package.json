@@ -19,7 +19,9 @@
   },
   "scripts": {
     "start": "node index.js",
+    "hajo": "node hajo.js",
     "start:dev": "cross-env VALETUDO_CONFIG_PATH=../local/valetudo_config.json npm run start",
+    "hajo:dev": "cross-env VALETUDO_CONFIG_PATH=../local/valetudo_config.json npm run hajo",
     "lint": "eslint -c .automated.eslintrc.json .",
     "lint_fix": "eslint -c .automated.eslintrc.json . --fix",
     "lint_pedantic": "eslint -c .pedantic.eslintrc.json .",

@@ -233,32 +233,12 @@ const menuTree: Array<MenuEntry | MenuSubEntry | MenuSubheader> = [
     },
     {
         kind: "MenuEntry",
-        routeMatch: "/valetudo/updater",
-        title: "Updater",
-        menuIcon: UpdaterIcon,
-        menuText: "Updater"
-    },
-    {
-        kind: "MenuEntry",
         routeMatch: "/valetudo/system_information",
         title: "System Information",
         menuIcon: SystemInformationIcon,
         menuText: "System Information"
     },
-    {
-        kind: "MenuEntry",
-        routeMatch: "/valetudo/help",
-        title: "General Help",
-        menuIcon: HelpIcon,
-        menuText: "General Help"
-    },
-    {
-        kind: "MenuEntry",
-        routeMatch: "/valetudo/about",
-        title: "About Valetudo",
-        menuIcon: AboutIcon,
-        menuText: "About Valetudo"
-    },
+
 ];
 
 const ValetudoAppBar: React.FunctionComponent<{ paletteMode: PaletteMode, setPaletteMode: (newMode: PaletteMode) => void }> = ({
@@ -295,9 +275,9 @@ const ValetudoAppBar: React.FunctionComponent<{ paletteMode: PaletteMode, setPal
 
 
         if (ret !== "") {
-            document.title = `Valetudo - ${ret}`;
+            document.title = `Laura ${ret}`;
         } else {
-            document.title = "Valetudo";
+            document.title = "Laura";
         }
 
         return ret;
@@ -389,60 +369,6 @@ const ValetudoAppBar: React.FunctionComponent<{ paletteMode: PaletteMode, setPal
                         />
                     </ListItem>
 
-
-                    <ListSubheader
-                        sx={{background: "transparent"}}>
-                        Links
-                    </ListSubheader>
-                    <ListItem
-                        button
-                        component="a"
-                        href="./swagger/"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        <ListItemIcon>
-                            <SwaggerUIIcon/>
-                        </ListItemIcon>
-                        <ListItemText primary="Swagger UI"/>
-                    </ListItem>
-                    <Divider/>
-                    <ListItem
-                        button
-                        component="a"
-                        href="https://valetudo.cloud"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        <ListItemIcon>
-                            <DocsIcon/>
-                        </ListItemIcon>
-                        <ListItemText primary="Docs"/>
-                    </ListItem>
-                    <ListItem
-                        button
-                        component="a"
-                        href="https://github.com/Hypfer/Valetudo"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        <ListItemIcon>
-                            <GithubIcon/>
-                        </ListItemIcon>
-                        <ListItemText primary="Hypfer/Valetudo"/>
-                    </ListItem>
-                    <ListItem
-                        button
-                        component="a"
-                        href="https://github.com/sponsors/Hypfer"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        <ListItemIcon>
-                            <DonateIcon/>
-                        </ListItemIcon>
-                        <ListItemText primary="Donate"/>
-                    </ListItem>
 
 
                 </List>

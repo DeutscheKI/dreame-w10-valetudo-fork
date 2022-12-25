@@ -170,11 +170,11 @@ class ValetudoRobot {
     }
 
     getManufacturer() {
-        return "Valetudo";
+        return "Laura";
     }
 
     getModelName() {
-        return "ValetudoRobot";
+        return "LauraRobot";
     }
 
     /**
