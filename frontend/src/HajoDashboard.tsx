@@ -1,4 +1,15 @@
-import {Box, Button, ButtonGroup, CircularProgress, Grid, Paper, styled, Typography, useTheme} from "@mui/material";
+import {
+    Box,
+    Button,
+    ButtonGroup,
+    CircularProgress,
+    Grid,
+    Paper,
+    styled,
+    ToggleButton,
+    Typography,
+    useTheme
+} from "@mui/material";
 import React from "react";
 import RobotStatus from "./controls/RobotStatus";
 import {
@@ -112,36 +123,37 @@ const HajoDashboard = (): JSX.Element => {
                     <Typography variant="subtitle2">State</Typography>
                 </Grid>
                 <Grid item>
-                    <Typography variant="overline" color="textSecondary">
+                    <Typography variant="overline" color="textSecondary" sx={{lineHeight:"1"}}>
                         {status.value}
                         {status.flag !== "none" ? <> &ndash; {status.flag}</> : ""}
                     </Typography>
                 </Grid>
             </Grid>
-            <Grid item xs={7}>
+            <Grid item xs={5}>
                 <ButtonGroup fullWidth variant="outlined">
                     <Button key="start" variant="outlined" size="medium"
-                            disabled={!(state === "idle" || state === "docked" || state === "paused" || state === "error" ) || basicControlIsExecuting || hasPendingMapAction}
+                            disabled={!(state === "idle" || state === "docked" || state === "paused" || state === "error" ) || basicControlIsExecuting || hasPendingMapAction || settingsOpen}
                             onClick={() => {
                                 executeBasicControlCommand("start");
                             }}
                             color="inherit" style={{height: "3.5em", borderColor: "inherit"}}><StartIcon /></Button>
                     <Button key="stop" variant="outlined" size="medium"
-                            disabled={!(flag === "resumable" || (state !== "idle" && state !== "docked")) || basicControlIsExecuting || hasPendingMapAction}
+                            disabled={!(flag === "resumable" || (state !== "idle" && state !== "docked")) || basicControlIsExecuting || hasPendingMapAction || settingsOpen}
                             onClick={() => {
                                 executeBasicControlCommand("stop");
                             }}
                             color="inherit" style={{height: "3.5em", borderColor: "inherit"}}><StopIcon /></Button>
                     <Button key="home" variant="outlined" size="medium"
-                            disabled={!(state === "idle" || state === "paused" || state === "error" ) || basicControlIsExecuting || hasPendingMapAction}
+                            disabled={!(state === "idle" || state === "paused" || state === "error" ) || basicControlIsExecuting || hasPendingMapAction || settingsOpen}
                             onClick={() => {
                                 executeBasicControlCommand("home");
                             }}
                             color="inherit" style={{height: "3.5em", borderColor: "inherit"}}><HomeIcon /></Button>
-                    <Button key="settings" variant="outlined" size="medium"
-                            onClick={() => {setSettingsOpen(!settingsOpen);}}
-                            color="inherit" style={{height: "3.5em", borderColor: "inherit"}}><SettingsIcon /></Button>
                 </ButtonGroup >
+            </Grid>
+            <Grid item xs={2} sx={{textAlign: "right"}}>
+                    <ToggleButton value={settingsOpen} selected={settingsOpen} onChange={() => {setSettingsOpen(!settingsOpen);}}
+                             style={{height: "3.5em", borderColor: "inherit"}}><SettingsIcon /></ToggleButton>
             </Grid>
         </Grid>
     </AbsBox>);
