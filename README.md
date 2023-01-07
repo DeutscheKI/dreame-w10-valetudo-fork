@@ -8,17 +8,16 @@ with the correct IDs obtained out of either
 `/data/log/map_info.bin` or `/tmp/mult_map.bin`
 on the robot.
 
+Screenshots:
+[Screenshot_20221225-213228.png]()
+[Screenshot_20221225-213236.png]()
+
 As you can see, I also built a new dashboard, 
 replaced the icon with a friendly green robot,
 and renamed things to "Laura", 
 to make things child-friendly
 and easier to use for non-technical people, too.
 BTW, "lau nhà" in Vietnamese means "mopping", hence the name.
-
-<img src="Screenshot_20221225-213228.png" style="float:left; max-height: 400px">
-<img src="Screenshot_20221225-213236.png" style="float:left; max-height: 400px">
-<div style="clear: both">&nbsp;</div>
-
 
 I moved the old map view and all "expert settings" to the URL
 `/#/oldmap` in case you need them.
