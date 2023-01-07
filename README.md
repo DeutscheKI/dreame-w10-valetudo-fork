@@ -15,8 +15,9 @@ to make things child-friendly
 and easier to use for non-technical people, too.
 BTW, "lau nhà" in Vietnamese means "mopping", hence the name.
 
-![](Screenshot_20221225-213228.png)
-![](Screenshot_20221225-213236.png)
+<img src="Screenshot_20221225-213228.png" style="float:left; max-height: 400px">
+<img src="Screenshot_20221225-213236.png" style="float:left; max-height: 400px">
+<div style="clear: both">&nbsp;</div>
 
 
 I moved the old map view and all "expert settings" to the URL
