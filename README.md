@@ -9,8 +9,8 @@ with the correct IDs obtained out of either
 on the robot.
 
 Screenshots:
-[Screenshot_20221225-213228.png]()
-[Screenshot_20221225-213236.png]()
+[Screenshot_20221225-213228.png](https://github.com/DeutscheKI/dreame-w10-valetudo-fork/blob/master/Screenshot_20221225-213228.png)
+[Screenshot_20221225-213236.png](https://github.com/DeutscheKI/dreame-w10-valetudo-fork/blob/master/Screenshot_20221225-213236.png)
 
 As you can see, I also built a new dashboard, 
 replaced the icon with a friendly green robot,
